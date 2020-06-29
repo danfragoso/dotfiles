@@ -1,0 +1,25 @@
+set number
+syntax on
+
+call plug#begin('~/.vim/plugged')
+        Plug 'scrooloose/nerdtree'
+        Plug 'kaicataldo/material.vim'
+        Plug 'itchyny/lightline.vim'
+        Plug 'ctrlpvim/ctrlp.vim'
+        Plug 'drewtempelmeyer/palenight.vim'
+        Plug 'yggdroot/indentline'
+        Plug 'airblade/vim-gitgutter'
+call plug#end()
+
+map <C-\> :NERDTreeToggle<CR>
+set updatetime=100
+let g:material_theme_style = 'palenight'
+let g:lightline = { 'colorscheme': 'palenight' }
+
+syntax enable
+set background=dark
+colorscheme palenight
+set termguicolors
+set laststatus=2
+highlight EndOfBuffer ctermfg=bg guifg=bg
+highlight Normal guibg=black
